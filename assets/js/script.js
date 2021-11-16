@@ -1,3 +1,4 @@
+//taskIdCounter was to help create and save unique tasks entered by the user
 var taskIdCounter = 0;
 var formEl = document.querySelector("#task-form");
 var tasksToDoEl = document.querySelector("#tasks-to-do");
@@ -6,6 +7,8 @@ var tasksCompletedEl = document.querySelector("#tasks-completed");
 var pageContentEl = document.querySelector("#page-content");
 var tasks = [];
 
+
+//this function occurs when the click event happens - the event is when a user clicks the submit button
 var taskFormHandler = function(event) {
   event.preventDefault();
   var taskNameInput = document.querySelector("input[name='task-name']").value;
@@ -220,7 +223,7 @@ var saveTasks = function() {
 };
 
 //get task items from localStorage
-//convert tasks form strong back to array of obj
+//convert tasks form string back to array of obj
 //iterates through a tasks array and creates task elements on the page
 
 var loadTasks = function() {
